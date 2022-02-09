@@ -34,3 +34,7 @@ test('caesar cipher of "attack at dawn"', () => {
 test('caesar cipher of "this is a test, with punctuation"', () => {
   expect(index.caesarCipher('this is a test, with punctuation')).toBe('ymnx nx f yjxy, bnym uzshyzfynts');
 });
+
+test('analyze array test', () => {
+  expect(index.analyzeArray([0, 1, 6, 5])).toEqual({average: 3, min: 0, max: 6, length: 4,});
+});

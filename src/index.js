@@ -37,7 +37,19 @@ function caesarCipher(inputString) {
   return outputString;
 }
 
+function analyzeArray(inputArray) {
+  const outputObject = {};
+  const arraySum = inputArray.reduce((previos, current) => previos + current);
+  outputObject.average = arraySum / inputArray.length;
+  outputObject.length = inputArray.length;
+  inputArray.sort();
+  outputObject.min = inputArray[0];
+  outputObject.max = inputArray[inputArray.length - 1];
+  return outputObject;
+}
+
 exports.capFirstLetter = capFirstLetter;
 exports.reverseString = reverseString;
 exports.calculator = calculator;
 exports.caesarCipher = caesarCipher;
+exports.analyzeArray = analyzeArray;
