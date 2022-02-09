@@ -13,9 +13,9 @@
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, exports) => {
 
-eval("throw new Error(\"Module parse failed: Unexpected token (18:17)\\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\\n| \\n| const calculator = {\\n>   add: (a, b) => return a + b,\\n|   subtract: (a, b) => a - b,\\n| \");\n\n//# sourceURL=webpack://unit-testing/./src/index.js?");
+eval("function capFirstLetter(inputString) {\n  const firstLetter = inputString[0].toUpperCase();\n  const restOfString = inputString.substring(1);\n  return firstLetter + restOfString;\n}\n\nfunction reverseString(inputString) {\n  const stringArray = inputString.split('');\n  const reverseArray = stringArray.reverse();\n  let outputString = '';\n  for (let i = 0; i < reverseArray.length; i += 1) {\n    outputString += reverseArray[i];\n  }\n  return outputString;\n}\n\nconst calculator = {\n  add: (a, b) => a + b,\n  subtract: (a, b) => a - b,\n  divide: (a, b) => a / b,\n  multiply: (a, b) => a * b,\n};\n\nexports.capFirstLetter = capFirstLetter;\nexports.reverseString = reverseString;\nexports.calculator = calculator;\n\n\n//# sourceURL=webpack://unit-testing/./src/index.js?");
 
 /***/ })
 
@@ -24,9 +24,9 @@ eval("throw new Error(\"Module parse failed: Unexpected token (18:17)\\nYou may 
 /******/ 	
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
-/******/ 	// This entry module doesn't tell about it's top-level declarations so it can't be inlined
+/******/ 	// This entry module can't be inlined because the eval devtool is used.
 /******/ 	var __webpack_exports__ = {};
-/******/ 	__webpack_modules__["./src/index.js"]();
+/******/ 	__webpack_modules__["./src/index.js"](0, __webpack_exports__);
 /******/ 	
 /******/ })()
 ;
